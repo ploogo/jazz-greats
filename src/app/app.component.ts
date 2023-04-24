@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MusicbrainzService } from './musicbrainz.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jazz-history';
+  artists: any[] = [];
+
+  constructor(private musicbrainzService: MusicbrainzService) {
+    this.fetchJazzArtists();
+  }
+
+  fetchJazzArtists() {
+    this.musicbrainzService.searchArtists('jazz').subscribe((data: any) => {
+      this.artists = data.artists;
+    });
+  }
 }
