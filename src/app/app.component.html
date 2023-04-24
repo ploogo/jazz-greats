@@ -6,8 +6,6 @@
     <div class="p-card">
       <div class="p-card-title">{{ artist.name }}</div>
       <div class="p-card-body">
-        <p>Type: {{ artist.type }}</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <p>Instrument: {{ artist.instrument }}</p>
+        <p>{{ artist.description }}</p>
+        <img [src]="artist.pic" />

@@ -5,12 +5,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MusicbrainzService {
-  apiUrl = 'https://musicbrainz.org/ws/2/';
+  apiUrl = 'http://localhost:1337/jazz-artists';
 
   constructor(private http: HttpClient) { }
 
-  searchArtists(query: string) {
-    const searchUrl = `${this.apiUrl}artist/?query=${query}&fmt=json`;
-    return this.http.get(searchUrl);
+  getJazzArtists() {
+    return this.http.get(this.apiUrl);
   }
 }

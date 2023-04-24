@@ -15,8 +15,8 @@ export class AppComponent {
   }
 
   fetchJazzArtists() {
-    this.musicbrainzService.searchArtists('jazz').subscribe((data: any) => {
-      this.artists = data.artists;
+    this.musicbrainzService.getJazzArtists().subscribe((data: any) => {
+      this.artists = data;
     });
   }
 }
