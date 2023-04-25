@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jazz_artists",
+  "info": {
+    "name": "Jazz Artist",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "pic": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "instrument": {
+      "type": "enumeration",
+      "enum": [
+        "saxophone",
+        "trumpet",
+        "trombone",
+        "piano",
+        "guitar",
+        "bass",
+        "drums",
+        "vibraphone",
+        "clarinet",
+        "flute",
+        "xylophone",
+        "HammondOrgan",
+        "vocals"
+      ]
+    }
+  }
+}

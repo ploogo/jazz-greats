@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/jazz-artists",
+      "handler": "jazz-artist.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jazz-artists/count",
+      "handler": "jazz-artist.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jazz-artists/:id",
+      "handler": "jazz-artist.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/jazz-artists",
+      "handler": "jazz-artist.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/jazz-artists/:id",
+      "handler": "jazz-artist.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/jazz-artists/:id",
+      "handler": "jazz-artist.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
